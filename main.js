@@ -13,6 +13,15 @@ const altoJ2  = joys2.clientHeight
 
 // console.log(ancho, " ",alto)
 
+window.addEventListener("deviceorientation",function(event) {
+    alpha = Math.round(event.alpha);
+    beta = Math.round(event.beta);
+    gamma = Math.round(event.gamma);
+    console.log(alpha)
+    console.log(beta)
+    console.log(gamma)
+}, true);
+
 function posCoor(elemento, X, Y){
     if(X>=0){
         elemento.style.left = X-elemento.clientWidth/2 +"px"
